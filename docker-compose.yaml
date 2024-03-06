@@ -1,0 +1,34 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/conf.d:/etc/nginx/conf.d
+      - ./app/public:/usr/share/nginx/public
+    depends_on:
+      - astro
+      - fastapi
+  fastapi:
+    build:
+      context: ./api⁉️
+      dockerfile: Dockerfile
+    env_file:
+      - ./docker/envs/astro.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/app/api
+  astro:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    env_file:
+      - ./docker/envs/astro.env
+    ports:
+      - "4321:4321"
+    volumes:
+      - ./app:/app/
+      - /app/node_modules

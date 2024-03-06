@@ -1,0 +1,7 @@
+uploads
+charts
+**/*.pyc
+__pycache__
+*.pyc
+*.pyo
+

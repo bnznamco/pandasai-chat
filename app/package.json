@@ -1,0 +1,25 @@
+{
+  "name": "pandasai-chat",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "npm run toolbar:disable && astro dev --host",
+    "start": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "toolbar:disable": "astro preferences disable devToolbar"
+  },
+  "dependencies": {
+    "@astrojs/vue": "^4.0.8",
+    "@nanostores/vue": "^0.10.0",
+    "astro": "^4.3.0",
+    "markdown-it": "^14.0.0",
+    "nanostores": "^0.9.5",
+    "vue": "^3.4.15"
+  },
+  "devDependencies": {
+    "@nanostores/logger": "^0.2.4",
+    "@vue/devtools-api": "^6.5.1"
+  }
+}

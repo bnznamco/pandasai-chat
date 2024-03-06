@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.vue";
+---
+
+
+<Layout title="PandasAi Demo">
+  <main>
+    <Main client:load />
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+</style>
