@@ -13,6 +13,12 @@ This repository contains an example of a modern data analysis stack. The stack i
 PandasAI is a library that provides a simple way to use machine learning models with Pandas DataFrames. It is built on top of the Pandas library and provides a simple interface for training and using machine learning models with Pandas DataFrames.
 Thanks to PandasAI, this project provides to the user a chat-bot that can answer questions about the data. The chat-bot is built using the FastApi framework and the PandasAI library, and it is served as a web application using the Astro frontend framework.
 
+## Before you start 📋
+
+create a `uploads` directory in the `api` directory to avoid errors on application startup.
+
+
+
 ## Quick Start 👷‍♂️
 
 To run the project, you need to have Docker installed on your machine. Then, you can run the following commands:
