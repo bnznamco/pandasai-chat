@@ -13,7 +13,7 @@ services:
       - fastapi
   fastapi:
     build:
-      context: ./api⁉️
+      context: ./api
       dockerfile: Dockerfile
     env_file:
       - ./docker/envs/astro.env
