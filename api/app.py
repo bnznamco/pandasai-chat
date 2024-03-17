@@ -1,6 +1,6 @@
 from uuid import uuid4
 from fastapi import FastAPI, UploadFile, Depends, HTTPException, Response
-import csv, base64, codecs, json
+import csv, base64, codecs, json, os
 from pathlib import Path
 from datetime import datetime
 from .sessions import SessionData, cookie, backend
@@ -15,6 +15,9 @@ BASE_DIR = Path(__file__).resolve().parent
 UPLOAD_PATH = BASE_DIR / "uploads"
 
 CHARTS_PATH = BASE_DIR / "charts"
+
+os.makedirs(UPLOAD_PATH, exist_ok=True)
+os.makedirs(CHARTS_PATH, exist_ok=True)
 
 app = FastAPI()
 
